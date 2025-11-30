@@ -1,44 +1,49 @@
 # QR Code Generator using Python
 
-This is a simple QR Code generator application created using Python. It allows you to generate QR codes for text or URLs and save them as image files.
+This is a simple QR Code generator application created using Python. It allows you to generate QR codes for text or URLs and save them as image files. The interface is built using Tkinter for easy usability.
 
 ## Prerequisites
-Before using this application, make sure you have the following installed:
+Before running this application, make sure you have the following installed:
+
 - Python (version 3.7 or later)
 - `qrcode` library
-- `tkinter` library (included in most Python distributions)
+- `tkinter` library (usually included with Python)
 
-## How to Use
-1. Clone this repository to your local machine or download the code.
+To install the required library, run:
 
-2. Open the terminal/command prompt and navigate to the directory where you have saved the code.
 
-3. Run the following command to execute the application:
+## How to Run
+1. Download or clone the project files.
+2. Open a terminal/command prompt and navigate to the folder containing the script.
+3. Run the program using:
 
-   ```
-   python qr_code_generator.py
-   ```
 
-   Replace `qr_code_generator.py` with the name of the Python script if it's different.
-
-4. The application will open, and you can use it to generate QR codes.
+4. The application window will open.
 
 ## Application Features
 
-### Generate QR Code
-- Enter the text or URL you want to encode in the QR code in the "Enter the text/URL" field.
-- Enter the location where you want to save the QR code image in the "Enter the location to save the QR Code" field.
-- Enter the name you want to give to the QR code image in the "Enter the name of the QR Code" field.
-- Enter the size of the QR code (1 to 40, with 1 being 21x21) in the "Enter the size" field.
+### 🔹 Enter Text or URL
+- Type any text or URL in the “Enter the text/URL” field.
+- This text will be encoded inside the QR code.
 
-### Saving QR Code
-- Click the "Generate Code" button to generate and save the QR code.
-- The application will create a QR code image with the specified content and save it in the location you provided.
-- You will receive a pop-up message confirming that the QR code has been saved successfully.
+### 🔹 Choose Save Location
+- Enter the folder path where you want to save the generated QR code.
 
-## Note
-- Make sure to specify a valid size for the QR code, as the size can impact the amount of data the code can store and its visual appearance.
+### 🔹 Choose QR Code File Name
+- Enter the desired name for the QR code image file.
 
-Feel free to customize the code and use it for your QR code generation needs. If you encounter any issues or have suggestions for improvement, please don't hesitate to open an issue or contribute to the project.
+### 🔹 Automatic QR Code Size
+- The application **no longer includes a size field**.
+- QR code size adjusts automatically using the internal `fit=True` algorithm.
+
+### 🔹 Generate QR Code
+- Click the **Generate Code** button.
+- The QR code image is generated and saved as a `.png` file.
+- A pop-up message confirms successful saving.
+
+## Notes
+- Ensure the save directory exists; otherwise, saving will fail.
+- The QR code is generated using PIL and saved as a PNG image.
+- You can customize the appearance, colors, and style in the code.
 
 Happy coding!
